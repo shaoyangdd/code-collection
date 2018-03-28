@@ -38,7 +38,7 @@ public class LambdaTest {
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			s.toString();
+			s.toString().toLowerCase();
 		}
         long end = System.currentTimeMillis();
         System.out.println("耗时："+(end-start) +" ms");
