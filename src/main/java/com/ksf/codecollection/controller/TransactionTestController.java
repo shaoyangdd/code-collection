@@ -29,7 +29,20 @@ public class TransactionTestController {
             System.out.printf("-------------------");
         }
         return "success";
-
     }
 
+    /**
+     * 测试内层事务
+     * @return
+     * @throws Exception
+     */
+    @PostMapping("/ha2")
+    public String testInnerTransaction() throws Exception {
+        try{
+            springTransactionTestService.insert2();
+        }catch (Exception e){
+            System.out.printf("-------------------");
+        }
+        return "success";
+    }
 }
